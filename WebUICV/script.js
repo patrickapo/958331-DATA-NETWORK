@@ -59,7 +59,7 @@ const handleSkillClick = (event) => {
 // Profile photo click interaction
 const handleProfilePhotoClick = () => {
     const photos = [
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+        'patrick.png',
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
     ];
