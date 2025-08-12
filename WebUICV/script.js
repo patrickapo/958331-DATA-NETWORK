@@ -1,8 +1,8 @@
 // Contact information display
 const showContact = () => {
-    const contactInfo = `📧 Email: patsiedlowski@email.com
-📱 Phone: +66947433234
-📍 Location: Chiang Mai, Thailand`;
+    const contactInfo = `Email: patsiedlowski@email.com
+Phone: +66947433234
+Location: Chiang Mai, Thailand`;
     
     alert(contactInfo);
 };
@@ -59,9 +59,7 @@ const handleSkillClick = (event) => {
 // Profile photo click interaction
 const handleProfilePhotoClick = () => {
     const photos = [
-        'patrick.png',
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
+        'patrick.png'
     ];
     
     const profilePhoto = document.getElementById('profilePhoto');
@@ -96,34 +94,13 @@ const addScrollAnimation = () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Button event listeners
     const viewContactBtn = document.getElementById('viewContactBtn');
-    const profilePhoto = document.getElementById('profilePhoto');
-    const skillsContainer = document.querySelector('.skills-container');
     
     if (viewContactBtn) {
         viewContactBtn.addEventListener('click', showContact);
     }
     
-    if (profilePhoto) {
-        profilePhoto.addEventListener('click', handleProfilePhotoClick);
-    }
-    
-    if (skillsContainer) {
-        skillsContainer.addEventListener('click', handleSkillClick);
-    }
-    
     // Add scroll animations
     addScrollAnimation();
-    
-    // Welcome message
-    setTimeout(() => {
-        alert(`Welcome to Patrick's Interactive CV! 🎉
-
-Features:
-• Click on skills to learn more
-• Click "View Contact" for contact info  
-• Click the profile photo to change it
-• Use Ctrl+C for contact info`);
-    }, 1000);
 });
 
 // Add keyboard shortcuts
@@ -136,21 +113,6 @@ document.addEventListener('keydown', (event) => {
                 break;
         }
     }
-});
-
-// Add some extra interactivity - skill badge hover effects
-document.addEventListener('DOMContentLoaded', () => {
-    const skillBadges = document.querySelectorAll('.skill-badge');
-    
-    skillBadges.forEach(badge => {
-        badge.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1) rotate(2deg)';
-        });
-        
-        badge.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) rotate(0deg)';
-        });
-    });
 });
 
 // Smooth scrolling for better user experience
